@@ -1,0 +1,98 @@
+<div class="page-bg">
+  <div class="container col-lg-7 col-md-9">
+    <div class="card user-form-card animate-fade">
+
+      <div class="card-header text-center">
+        <h4>👤 Add New User</h4>
+        <small>Create a new user account</small>
+      </div>
+
+      <div class="card-body">
+
+        <!-- Row 1 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>User Name</label>
+            <input class="form-control"
+                   [(ngModel)]="user.userName"
+                   placeholder="Full name">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label>Email</label>
+            <input class="form-control"
+                   [(ngModel)]="user.email"
+                   placeholder="Email address">
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label>Mobile</label>
+            <input class="form-control"
+                   [(ngModel)]="user.mobileNo"
+                   placeholder="Mobile number">
+          </div>
+
+          <div class="col-md-6 mb-3">
+            <label>Password</label>
+            <input type="password"
+                   class="form-control"
+                   [(ngModel)]="user.password"
+                   placeholder="Password">
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <label>Country</label>
+            <select class="form-select"
+                    [(ngModel)]="user.countryId"
+                    (change)="onCountryChange()">
+              <option value="0">Select Country</option>
+              <option *ngFor="let c of countries" [value]="c.countryId">
+                {{ c.countryName }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label>State</label>
+            <select class="form-select"
+                    [(ngModel)]="user.stateId"
+                    (change)="onStateChange()">
+              <option value="0">Select State</option>
+              <option *ngFor="let s of states" [value]="s.stateId">
+                {{ s.stateName }}
+              </option>
+            </select>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            <label>City</label>
+            <select class="form-select"
+                    [(ngModel)]="user.cityId">
+              <option value="0">Select City</option>
+              <option *ngFor="let c of cities" [value]="c.cityId">
+                {{ c.cityName }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-end mt-4">
+          <button class="btn btn-save me-2" (click)="saveUser()">
+            💾 Save
+          </button>
+          <button class="btn btn-cancel" (click)="cancel()">
+            ✖ Cancel
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

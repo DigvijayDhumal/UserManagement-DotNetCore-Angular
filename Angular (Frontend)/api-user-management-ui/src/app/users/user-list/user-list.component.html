@@ -1,0 +1,39 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h2>👥 Users</h2>
+
+    <a routerLink="/users/add" class="add-btn">
+      ➕ Add User
+    </a>
+  </div>
+
+  <!-- Table -->
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let u of users">
+          <td>{{ u.userName }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.mobileNo }}</td>
+        </tr>
+
+        <tr *ngIf="users.length === 0">
+          <td colspan="3" class="empty">
+            No users found
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

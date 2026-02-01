@@ -1,0 +1,18 @@
+.stat-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.stat-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px;
+  border-radius: 14px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}

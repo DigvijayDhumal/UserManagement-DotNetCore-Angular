@@ -1,0 +1,98 @@
+/* Full screen center */
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Card */
+.login-card {
+  width: 360px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Animation */
+.animate-card {
+  animation: slideFade 0.8s ease-in-out;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text */
+.title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Login Button */
+.btn-login {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  background: #667eea;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  background: #5a67d8;
+  transform: translateY(-2px);
+}
+
+/* Divider */
+.divider {
+  margin: 15px 0;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Add User Button */
+.btn-add-user {
+  width: 100%;
+  height: 45px;
+  border-radius: 8px;
+  background: #38b2ac;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-add-user:hover {
+  background: #319795;
+  transform: translateY(-2px);
+}

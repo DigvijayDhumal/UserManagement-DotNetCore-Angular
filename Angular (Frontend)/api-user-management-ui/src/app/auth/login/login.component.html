@@ -1,0 +1,35 @@
+<div class="login-wrapper">
+  <div class="login-card animate-card">
+
+    <h2 class="title">Welcome Back 👋</h2>
+    <p class="subtitle">Please login to continue</p>
+
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        placeholder="Email address"
+        [(ngModel)]="email">
+    </div>
+
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        placeholder="Password"
+        [(ngModel)]="password">
+    </div>
+
+    <button class="btn btn-login" (click)="login()">
+      Login
+    </button>
+
+    <div class="divider">OR</div>
+
+    <!-- 🔥 ADD USER BUTTON -->
+    <button class="btn btn-add-user" (click)="goToAddUser()">
+      ➕ Add New User
+    </button>
+
+  </div>
+</div>

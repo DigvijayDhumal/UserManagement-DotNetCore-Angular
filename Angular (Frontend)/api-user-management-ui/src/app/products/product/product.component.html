@@ -1,0 +1,68 @@
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <h2>🛒 My Products</h2>
+    <button class="add-btn" (click)="toggleForm()">
+      ➕ Add Product
+    </button>
+  </div>
+
+  <!-- Product Table -->
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price (₹)</th>
+          <th>Qty</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of products">
+          <td>{{ p.productName }}</td>
+          <td>{{ p.price }}</td>
+          <td>{{ p.quantity }}</td>
+          <td>
+            <button class="edit-btn" (click)="editProduct(p)">Edit</button>
+            <button class="delete-btn" (click)="deleteProduct(p.productId)">Delete</button>
+          </td>
+        </tr>
+
+        <tr *ngIf="products.length === 0">
+          <td colspan="4" class="empty">No products found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Add / Edit Form -->
+  <div class="form-box" *ngIf="showForm">
+
+    <h3>{{ isEdit ? 'Edit Product' : 'Add Product' }}</h3>
+
+    <div class="form-row">
+      <label>Product Name</label>
+      <input [(ngModel)]="product.productName">
+    </div>
+
+    <div class="form-row">
+      <label>Price</label>
+      <input type="number" [(ngModel)]="product.price">
+    </div>
+
+    <div class="form-row">
+      <label>Quantity</label>
+      <input type="number" [(ngModel)]="product.quantity">
+    </div>
+
+    <div class="form-actions">
+      <button class="save-btn" (click)="saveProduct()">Save</button>
+      <button class="cancel-btn" (click)="cancelForm()">Cancel</button>
+    </div>
+
+  </div>
+
+</div>
